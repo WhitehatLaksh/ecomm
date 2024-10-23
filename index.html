@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Page E-Commerce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>E-Commerce Store</h1>
+        <nav>
+            <button onclick="showSection('home')">Home</button>
+            <button onclick="showSection('categories')">Categories</button>
+            <button onclick="showSection('cart')">Cart (<span id="cart-count">0</span>)</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Homepage Section -->
+        <section id="home" class="page active">
+            <h2>                   Welcome to Our Store</h2>
+            <p>Discover amazing products!</p>
+            <button onclick="addToCart(1)">Add Product 1 to Cart</button>
+        </section>
+
+        <!-- Category Page Section -->
+        <section id="categories" class="page">
+            <h2>Categories</h2>
+            <div class="category">
+                <h3>Category 1</h3>
+                <button onclick="addToCart(2)">Add Product 2 to Cart</button>
+            </div>
+            <div class="category">
+                <h3>Category 2</h3>
+                <button onclick="addToCart(3)">Add Product 3 to Cart</button>
+            </div>
+        </section>
+
+        <!-- Cart Page Section -->
+        <section id="cart" class="page">
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <button onclick="clearCart()">Clear Cart</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 E-Commerce Store</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
